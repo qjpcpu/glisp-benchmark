@@ -1,17 +1,17 @@
-| 基准测试 | glisp (ns/op) | goja (ns/op) | lua (ns/op) | zygo (ns/op) | 优胜者 |
+| Benchmark | glisp (ns/op) | goja (ns/op) | lua (ns/op) | zygo (ns/op) | Winner |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| 阶乘计算 | 6959 | 3427 | **1943** | 43054 | lua |
-| 正则表达式匹配 | **603.7** | 887.3 | 821.1 | 2180 | glisp |
-| 复杂条件 | 726.8 | **492.0** | 517.8 | 4608 | goja |
-| 时间格式化 | **1179** | 1646 | 1355 | N/A | glisp |
-| 哈希写入 | 689.5 | 593.7 | **548.4** | 2535 | lua |
-| 哈希删除 | 497.8 | **414.7** | 449.0 | 1917 | goja |
-| 哈希访问 | 523.7 | **443.5** | 565.6 | 1984 | goja |
-| JSON解析和修改 | 4667 | 6968 | **3090** | 12898 | lua |
+| Factorial Calculation | 6959 | 3427 | **1943** | 43054 | lua |
+| Regular Expression Matching | **603.7** | 887.3 | 821.1 | 2180 | glisp |
+| Complex Conditions | 726.8 | **492.0** | 517.8 | 4608 | goja |
+| Time Formatting | **1179** | 1646 | 1355 | N/A | glisp |
+| Hash Write | 689.5 | 593.7 | **548.4** | 2535 | lua |
+| Hash Delete | 497.8 | **414.7** | 449.0 | 1917 | goja |
+| Hash Access | 523.7 | **443.5** | 565.6 | 1984 | goja |
+| JSON Parsing and Modification | 4667 | 6968 | **3090** | 12898 | lua |
 
-**结论:**
+**Conclusion:**
 
-*   **Lua:** 在计算密集型任务（阶乘和JSON操作）和哈希写入方面表现最佳。
-*   **glisp:** 在字符串操作（正则表达式）和时间格式化方面表现出色。
-*   **Goja:** 在处理复杂逻辑条件、哈希删除和哈希访问时速度最快。
-*   **Zygo:** 在所有测试中表现最差。
+*   **Lua:** Performs best in computationally intensive tasks (factorial and JSON operations) and hash writes.
+*   **glisp:** Excels in string operations (regular expressions) and time formatting.
+*   **Goja:** Fastest in handling complex logical conditions, hash deletes, and hash accesses.
+*   **Zygo:** Performed the worst in all tests.

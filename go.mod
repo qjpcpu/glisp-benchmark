@@ -6,7 +6,7 @@ require (
 	github.com/Shopify/go-lua v0.0.0-20250718183320-1e37f32ad7d0
 	github.com/dop251/goja v0.0.0-20251008123653-cf18d89f3cf6
 	github.com/glycerine/zygomys/v9 v9.1.2
-	github.com/qjpcpu/glisp v0.0.0-20251017100014-6dc41c9cb219
+	github.com/qjpcpu/glisp v0.0.0-20251030094027-c2d49f245bb9
 )
 
 require (
@@ -29,4 +29,4 @@ require (
 	golang.org/x/text v0.3.8 // indirect
 )
 
-replace github.com/qjpcpu/glisp => ../glisp
+//replace github.com/qjpcpu/glisp => ../glisp
