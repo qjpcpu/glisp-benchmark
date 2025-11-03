@@ -15,3 +15,13 @@
 *   **glisp:** Excels in string operations (regular expressions) and time formatting.
 *   **Goja:** Fastest in handling complex logical conditions, hash deletes, and hash accesses.
 *   **Zygo:** Performed the worst in all tests.
+
+**glisp vs. zygo Performance Discussion:**
+
+glisp and zygo are developed based on the same kernel (https://github.com/zhemao/glisp). According to the performance test results, glisp significantly outperforms zygo in all test scenarios. This is mainly due to targeted optimizations made in glisp in the following areas:
+
+*   **Built-in Function Optimization:** glisp has rewritten and optimized commonly used built-in functions, reducing unnecessary type conversions and memory allocations.
+*   **Virtual Machine Instruction Set Optimization:** glisp has optimized the virtual machine's instruction set, allowing certain operations to execute faster.
+*   **Compiler Optimization:** The glisp compiler performs optimizations when generating bytecode, reducing redundant instructions.
+
+In summary, although glisp and zygo share the same core, glisp's extensive optimizations give it a significant performance advantage. This indicates that in the implementation of scripting languages, even with the same kernel, higher-level optimizations are crucial.
