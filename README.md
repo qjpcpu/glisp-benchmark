@@ -1,20 +1,20 @@
-| Benchmark | glisp (ns/op) | goja (ns/op) | lua (ns/op) | zygo (ns/op) | Winner |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| Factorial Calculation | 6546 | 3357 | **1905** | 42486 | lua |
-| Regular Expression Matching | **583.8** | 877.5 | 828.8 | 2149 | glisp |
-| Complex Conditions | 771.0 | **490.0** | 499.7 | 4692 | goja |
-| Time Formatting | **1165** | 1661 | 1342 | N/A | glisp |
-| Hash Write | 755.0 | 542.7 | **523.6** | 2583 | lua |
-| Hash Delete | 535.1 | 434.6 | **432.4** | 1933 | lua |
-| Hash Access | 493.3 | **448.8** | 506.5 | 2055 | goja |
-| JSON Parsing and Modification | 4444 | 7088 | **3029** | 12230 | lua |
-| String Concat | 616.5 | 769.2 | **403.1** | 11528 | lua |
+| Benchmark | glisp (op/ms) | goja (op/ms) | lua (op/ms) | zygo (op/ms) | Winner |
+|:--- |:---:|:---:|:---:|:---:|:---:|
+| Factorial Calculation | 6624 | 3453 | **1959** | 43131 | lua |
+| Regular Expression Matching | **631** | 892 | 873 | 2265 | glisp |
+| Complex Conditions | 621 | **508** | 515 | 4977 | goja |
+| Time Formatting | **1104** | 1736 | 1356 | N/A | glisp |
+| Hash Write | 636 | 527 | **515** | 2576 | lua |
+| Hash Delete | 475 | **426** | 433 | 1901 | goja |
+| Hash Access | 530 | **416** | 474 | 2023 | goja |
+| JSON Parsing and Modification | 4450 | 6897 | **3060** | 12830 | lua |
+| String Concat | **239** | 773 | 427 | 12342 | glisp |
 
 **Conclusion:**
 
-*   **Lua:** Performs best in computationally intensive tasks (factorial and JSON operations), hash writes, hash deletes and string concat.
-*   **glisp:** Excels in string operations (regular expressions) and time formatting.
-*   **Goja:** Fastest in handling complex logical conditions and hash accesses.
+*   **Lua:** Performs best in computationally intensive tasks (factorial and JSON operations) and hash writes.
+*   **glisp:** Excels in string operations (regular expressions), time formatting and string concat.
+*   **Goja:** Fastest in handling complex logical conditions, hash accesses and hash deletes.
 *   **Zygo:** Performed the worst in all tests.
 
 **glisp vs. zygo Performance Discussion:**

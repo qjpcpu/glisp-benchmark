@@ -45,9 +45,9 @@ func BenchmarkComplexCondition_glisp(t *testing.B) {
 	vm.SourceStream(bytes.NewBufferString(`
 (defn complex-condition [n]
   (cond
-    (and (>= n 0) (<= n 10)) "low"
-    (and (> n 10) (<= n 20)) "medium"
-    (and (> n 20) (<= n 30)) "high"
+    (<= 0 n 10) "low"
+    (<= 10 n 20) "medium"
+   (<= 20 n 30) "high"
     "unknown"))
 `))
 	for i := 0; i < t.N; i++ {

@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -6,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/dop251/goja"
+	"github.com/glycerine/zygomys/v9/zygo"
 	"github.com/qjpcpu/glisp"
 	ext "github.com/qjpcpu/glisp/extensions"
 	"github.com/yuin/gopher-lua"
-	"github.com/glycerine/zygomys/v9/zygo"
 )
 
 func BenchmarkStringConcat_glisp(t *testing.B) {
@@ -17,7 +16,7 @@ func BenchmarkStringConcat_glisp(t *testing.B) {
 	ext.ImportCoreUtils(vm)
 	vm.SourceStream(bytes.NewBufferString(`(defn string-concat [a b c] (concat a b c))`))
 	for i := 0; i < t.N; i++ {
-		v, err := vm.ApplyByName("string-concat", glisp.MakeArgs(glisp.SexpStr("hello"), glisp.SexpStr(" "), glisp.SexpStr("world")))
+		v, err := vm.ApplyByName("concat", glisp.MakeArgs(glisp.SexpStr("hello"), glisp.SexpStr(" "), glisp.SexpStr("world")))
 		MustSuccess(t, err)
 		s, ok := v.(glisp.SexpStr)
 		MustTrue(t, ok)
