@@ -7,6 +7,7 @@ require (
 	github.com/dop251/goja v0.0.0-20251008123653-cf18d89f3cf6
 	github.com/glycerine/zygomys/v9 v9.1.2
 	github.com/qjpcpu/glisp v0.0.0-20251030094027-c2d49f245bb9
+	github.com/yuin/gopher-lua v1.1.1
 )
 
 require (
